@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: bloom
+      POSTGRES_PASSWORD: bloom_dev_password
+      POSTGRES_DB: bloom_pos
+    ports:
+      - "5432:5432"
+    volumes:
+      - bloom_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bloom -d bloom_pos"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  bloom_pgdata:
