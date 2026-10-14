@@ -1,10 +1,11 @@
+
 {
-  "id": "/nanghoa/",
+  "id": "/pos/",
   "name": "Nàng Hoa POS – Quản lý tiệm hoa",
   "short_name": "Nàng Hoa",
   "description": "Quản lý bán hàng, đơn hoa, sản phẩm, kho, doanh thu và sao lưu Excel.",
-  "start_url": "/nanghoa/",
-  "scope": "/nanghoa/",
+  "start_url": "/pos/",
+  "scope": "/pos/",
   "display": "standalone",
   "display_override": [
     "standalone",
@@ -29,3 +30,4 @@
     }
   ]
 }
+  
